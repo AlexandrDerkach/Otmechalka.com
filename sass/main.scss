@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&subset=cyrillic,cyrillic-ext,latin-ext');
+@import 'reset';
+$blue_text_color: #14569a;
+$brown_text_color: #ab4428;
+$green_text_color: #21755d;
+$blue_bg_page_color: #4b90dd;
+$default-link-color: #007cc3;
+$user_info_table_bg: #f7fbfe;
+$user_info_tr_border_color: #c7def8;
+$freez_history_table_bg: #fff8f6;
+$freez_history_tr_border_color: #f2d7d1;
+$footer_bg_color: #14569a;
+.blue_bg_page_color {
+	background-color: $blue_bg_page_color;
+}
+
+.blue_text_color {
+	color: $blue_text_color;
+}
+
+.brown_text_color {
+	color: $brown_text_color;
+}
+
+.green_text_color {
+	color: $green_text_color;
+}
+
+body,
+html {
+	height: 100%;
+	font: 400 62.5% 'Roboto', sans-serif;
+}
+
+.bold {
+	font-weight: 700;
+}
+
+.block {
+	display: block!important;
+}
+
+.none {
+	display: none!important;
+}
+
+.flex {
+	display: -webkit-box!important;
+	display: -webkit-flex!important;
+	display: -moz-box!important;
+	display: -ms-flexbox!important;
+	display: flex!important;
+}
+
+.rotatorClass {
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+	position: absolute;
+}
+
+.rotatorReversClass {
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	position: absolute;
+}
+.seventyPersent{
+	max-width: 70%;
+}
+.page-wrap {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+
+.content {
+	flex: 1 0 auto;
+}
+
+.footer {
+	flex: 0 0 auto;
+}
+
+.top_flex_wrap,
+.content_flex_wrap {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.top_blue_title {
+	color: $blue_text_color;
+	font-size: 1.6rem;
+}
+
+.content_block {
+	width: 83%;
+	margin: 0 auto;
+	order: 2;
+}
+
+.header_inner {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: flex-start;
+	padding: 0 8% 0 3%;
+	font-size: 1.2rem;
+	a {
+		color: $default-link-color;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+
+.header_inner__col {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header_inner__top_col {
+	margin-bottom: 1.6rem;
+}
+
+.user_info_block {
+	margin-left: auto;
+	margin-right: 15%;
+}
+
+.sidebar_block {
+	width: 17%;
+	order: 1;
+}
+
+.notes_header {
+	padding: 1.3rem 1% 3rem;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: center;
+	border-right: 1px solid #e8e8e8;
+}
+
+.sidebar_header__img {
+	width: 3.8rem;
+	height: 4.2rem;
+}
+
+.notes_header__img {
+	background: url('../img/notes-img.png') no-repeat center center;
+}
+
+.content_flex_wrap {
+	align-items: flex-start;
+}
+
+.content_inner {
+	width: 85%;
+	padding: 0 5% 0 3%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: flex-start;
+	order: 2;
+	position: relative;
+	thead {
+		border-bottom: 2px solid;
+		font-weight: 700;
+	}
+	th {
+		font-size: 1.2rem;
+		padding: 1.3rem .8rem 1.1rem;
+	}
+}
+
+.content__table_block {
+	&:not(:last-child) {
+		margin-bottom: 3.5rem;
+	}
+}
+
+.table_caption {
+	font-size: 1.2rem;
+	margin-bottom: 1.3rem;
+}
+
+.content__table_block {
+	width: 49%;
+	text-align: left;
+	overflow-x: auto;
+}
+
+.content__table {
+	width: 100%;
+	tr:not(:last-child) {
+		border-top: 1px solid;
+		border-bottom: 1px solid;
+	}
+}
+
+.user_info_table {
+	width: 100%;
+	background-color: $user_info_table_bg;
+	border-color: $user_info_tr_border_color;
+}
+
+.freez_history_table {
+	width: 100%;
+	background-color: $freez_history_table_bg;
+	tr {
+		border-color: $freez_history_tr_border_color!important;
+	}
+}
+
+.visit_history_table {
+	tr,
+	thead {
+		border-color: #cceee4!important;
+	}
+	th {
+		padding: 1.3rem .5rem 1.1rem;
+		font-size: 1rem;
+	}
+	tbody {
+		tr {
+			th {
+				&:nth-child(4) {
+					color: #712da1;
+					font-weight: 700;
+				}
+			}
+		}
+	}
+}
+
+.content__sidebar_body {
+	padding: 2rem 1rem 2rem 0.5rem;
+}
+
+.sidebar_list {
+	font-size: 1.4rem;
+	li {
+		&:not(:last-child) {
+			margin-bottom: 3.3rem;
+		}
+		a {
+			color: #fff;
+			text-decoration: none;
+			&:hover {
+				margin-left: 1rem;
+				transition: all .5s ease-out;
+			}
+			&:not(:hover) {
+				transition: .5s;
+			}
+		}
+	}
+}
+
+.come_back_btn{
+	position: absolute;
+	bottom: -3rem;
+	padding: 1.2rem;
+	font-size: 1rem;
+	color: #fff;
+	border-radius: .5rem;
+	cursor: pointer;
+	&:hover{
+		background-color: firebrick;
+	}
+}
+
+.blue_btn{
+	background-color: #307bb8;
+	border: 1px solid #2a6ea5;
+}
+
+.footer {
+	width: 100%;
+	margin-top: 5rem;
+	font-size: 1rem;
+	color: #fff;
+	text-align: center;
+	padding: 1.3rem 0;
+	a {
+		color: #b9c5df;
+		text-decoration: none;
+	}
+}
+
+.blue_footer {
+	background-color: $footer_bg_color;
+}
+
+.touch_menu {
+	width: 5rem;
+	height: 5rem;
+	display: none;
+	position: fixed;
+	right: 1%;
+	top: 5rem;
+	border: 1px solid $blue_text_color;
+	font-size: 1.6rem;
+	color: $blue_text_color;
+	background-color: #fff;
+	cursor: pointer;
+	border-radius: 15%;
+}
+
+.touch_menu:hover {
+	color: red;
+	border-color: red;
+	-webkit-transition: 1s;
+	-o-transition: 1s;
+	-moz-transition: 1s;
+	transition: 1s;
+}
+
+.touch_menu_inner_cont {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	-moz-box-orient: vertical;
+	-moz-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-moz-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-moz-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+}
+
+.touch_menu_inner_cont i {
+	display: block;
+	width: 3rem;
+	height: 0.5rem;
+	background-color: $blue_text_color;
+}
+
+.touch_menu_inner_cont i:not(:last-child) {
+	margin-bottom: 0.5rem;
+}
+
+.touch_menu_inner_cont:hover i {
+	background-color: red;
+}
